@@ -10,8 +10,8 @@
 
 //SWI2C configuration
 #define SWI2C
-//#define SWI2C_SDA         20 //SDA on P3
-//#define SWI2C_SCL         21 //SCL on P3
+#define SWI2C_SDA         20 //SDA on P3
+#define SWI2C_SCL         21 //SCL on P3
 #define SWI2C_A8
 #define SWI2C_DEL         20 //2us clock delay
 #define SWI2C_TMO         2048 //2048 cycles timeout
@@ -47,7 +47,7 @@
 
 //LANG - Multi-language support
 //#define LANG_MODE              0 // primary language only
-#define LANG_MODE              1 // sec. language support
+#define LANG_MODE              0 // sec. language support
 
 #define LANG_SIZE_RESERVED     0x2900 // reserved space for secondary language (10496 bytes)
 
