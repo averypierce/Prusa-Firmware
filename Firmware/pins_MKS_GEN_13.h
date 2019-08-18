@@ -30,33 +30,43 @@
  */
 #define ELECTRONICS "hotdog"
 #define KNOWN_BOARD
-#define BEEPER              78  // Beeper on AUX-4
-#define LCD_PINS_RS         38
-#define LCD_PINS_ENABLE      5
-#define LCD_PINS_D4	        14
-#define LCD_PINS_D5         15
-#define LCD_PINS_D6         32
-#define LCD_PINS_D7         31
-#define Z_TMC2130_DIAG      68
-#define Z_TMC2130_CS        67
-#define E0_TMC2130_CS       66
-#define E0_TMC2130_DIAG     65
-#define X_TMC2130_CS       66
-#define X_TMC2130_DIAG     65
-#define Y_TMC2130_CS       66
-#define Y_TMC2130_DIAG     65
-#define BTN_ENC              9  // the click
-#define TEMP_2_PIN          -1
-#define SDCARDDETECT           72
+
+#define BEEPER              37  // Beeper on AUX-4
+#define LCD_PINS_RS         16
+#define LCD_PINS_ENABLE     17
+#define LCD_PINS_D4	        23
+#define LCD_PINS_D5         25
+#define LCD_PINS_D6         27
+#define LCD_PINS_D7         29
+
+
+#define Z_TMC2130_CS        42
+#define Z_TMC2130_DIAG      65
+
+#define E0_TMC2130_CS       44
+#define E0_TMC2130_DIAG     66
+
+#define X_TMC2130_CS       40
+#define X_TMC2130_DIAG     63
+
+#define Y_TMC2130_CS       59
+#define Y_TMC2130_DIAG     64
+
+
+#define BTN_ENC             35
+#define SDCARDDETECT        49
 #define SDPOWER             -1
-#define IR_SENSOR_PIN 62 //idler sensor @PK0 (digital pin 62/A8)
-#define BTN_EN1                72
-#define BTN_EN2                73
-#define TEMP_AMBIENT_PIN     5 //A5
-#define TEMP_PINDA_PIN       3 //A3
-#define FAN_PIN              6 // avery: maybe not needed
-#define FAN_1_PIN           -1 // avery: maybe not needed
-#define TACH_0				30	// noctua extruder fan
+#define BTN_EN1             31
+#define BTN_EN2             33
+
+#define TEMP_AMBIENT_PIN     5 //A6
+#define TEMP_PINDA_PIN       3 //A1
+#define TEMP_2_PIN          -1
+
+#define IR_SENSOR_PIN       62 //A8
+#define FAN_PIN              6 
+#define FAN_1_PIN           -1 
+#define TACH_0				      30	// noctua extruder fan
 
 #define AMBIENT_THERMISTOR
 #define PINDA_THERMISTOR
