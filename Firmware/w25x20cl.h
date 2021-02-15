@@ -8,14 +8,17 @@
 
 
 
-#define W25X20CL_STATUS_BUSY   0x01
-#define W25X20CL_STATUS_WEL    0x02
-#define W25X20CL_STATUS_BP0    0x04
-#define W25X20CL_STATUS_BP1    0x08
-#define W25X20CL_STATUS_TB     0x20
-#define W25X20CL_STATUS_SRP    0x80
-
-#define W25X20CL_SPI_ENTER() spi_setup(W25X20CL_SPCR, W25X20CL_SPSR)
+/*RAMPS*/
+#if MOTHERBOARD != BOARD_RAMPS_14_EFB
+	#define W25X20CL_STATUS_BUSY   0x01
+	#define W25X20CL_STATUS_WEL    0x02
+	#define W25X20CL_STATUS_BP0    0x04
+	#define W25X20CL_STATUS_BP1    0x08
+	#define W25X20CL_STATUS_TB     0x20
+	#define W25X20CL_STATUS_SRP    0x80
+	
+	#define W25X20CL_SPI_ENTER() spi_setup(W25X20CL_SPCR, W25X20CL_SPSR)
+#endif /*RAMPS*/
 
 #if defined(__cplusplus)
 extern "C" {

@@ -1124,9 +1124,19 @@ void tp_init()
 
   adc_init();
 
-  timer0_init();
-  OCR2B = 128;
-  TIMSK2 |= (1<<OCIE2B);
+  /*RAMPS*/
+  #if (MOTHERBOARD == BOARD_RAMPS_14_EFB) && defined(SYSTEM_TIMER_2)
+    timer4_init();
+    OCR3B = 128;
+    TIMSK3 |= (1 << OCIE3B); 
+  #elif (MOTHERBOARD == BOARD_RAMPS_14_EFB) && !defined(SYSTEM_TIMER_2)
+    OCR0B = 128;
+    TIMSK0 |= (1<<OCIE0B);  
+  #else
+    timer0_init(); 
+    OCR2B = 128;
+    TIMSK2 |= (1 << OCIE2B); 
+  #endif
   
   timer4_init(); //for tone and Extruder fan PWM
   
