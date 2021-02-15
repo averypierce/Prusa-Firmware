@@ -5,9 +5,7 @@
 
 #include "Arduino.h"
 /*RAMPS*/
-#if MOTHERBOARD != BOARD_RAMPS_14_EFB
-	#define SYSTEM_TIMER_2
-#endif
+#define SYSTEM_TIMER_2
 
 #ifdef SYSTEM_TIMER_2
 #include "timer02.h"

@@ -10,7 +10,7 @@
 #endif
 
 //#define UVLO_SUPPORT
-//#define PINDA_THERMISTOR
+#define PINDA_THERMISTOR
 //#define SWI2C_SDA      20 //SDA (already defined in config.h)
 //#define SWI2C_SCL      21 //SCL (already defined in config.h)
 
@@ -75,7 +75,7 @@
 
 /*test*/
 //#define TEMP_AMBIENT_PIN	-1
-//#define TEMP_PINDA_PIN    -1
+#define TEMP_PINDA_PIN    7
 
 #ifdef TMC2130
 #define E0_TMC2130_CS		42
@@ -126,7 +126,7 @@
 	#define PS_ON_PIN           -1
 	#define KILL_PIN            41  //
 	#define SUICIDE_PIN         -1  // PIN that has to be turned on right after start, to keep power flowing.
-	#define TACH_0				-1 //30	// noctua extruder fan
+	#define TACH_0				30 //30	// noctua extruder fan
 
 	#define BEEPER              37  // Beeper
 	#define LCD_PINS_RS         40
