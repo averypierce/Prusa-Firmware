@@ -20,6 +20,9 @@ void __delay(void)
 	_delay_us(1.5);
 }
 
+/*RAMPS*/
+// in case disable SWI2C
+#ifdef SWI2C
 void swi2c_init(void)
 {
 	WRITE(SWI2C_SDA, 1);
