@@ -1012,7 +1012,11 @@ static void w25x20cl_err_msg()
 // are initialized by the main() routine provided by the Arduino framework.
 void setup()
 {
-	mmu_init();
+	/*RAMPS*/
+	// disable MMU
+	#if MOTHERBOARD != BOARD_RAMPS_14_EFB
+		mmu_init();
+	#endif
 
 	ultralcd_init();
 
