@@ -118,6 +118,7 @@ uint8_t swi2c_check(uint8_t dev_addr)
 	swi2c_stop();
 	return 1;
 }
+#endif //SWI2C
 
 #ifdef SWI2C_A8 //8bit address
 
